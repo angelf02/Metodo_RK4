@@ -1,4 +1,4 @@
-site_name: Solución de sistemas dinámicos con RK4
+site_name: Módulo RK4
 
 theme:
   name: "material"

@@ -18,7 +18,7 @@
     
     
       
-        <title>Referencia - Solución de sistemas dinámicos con RK4</title>
+        <title>Referencia - Módulo RK4</title>
       
     
     
@@ -78,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Solución de sistemas dinámicos con RK4" class="md-header__button md-logo" aria-label="Solución de sistemas dinámicos con RK4" data-md-component="logo">
+    <a href="index.html" title="Módulo RK4" class="md-header__button md-logo" aria-label="Módulo RK4" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -92,7 +92,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Solución de sistemas dinámicos con RK4
+            Módulo RK4
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -173,13 +173,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Solución de sistemas dinámicos con RK4" class="md-nav__button md-logo" aria-label="Solución de sistemas dinámicos con RK4" data-md-component="logo">
+    <a href="index.html" title="Módulo RK4" class="md-nav__button md-logo" aria-label="Módulo RK4" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Solución de sistemas dinámicos con RK4
+    Módulo RK4
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -195,7 +195,7 @@
         
   
   <span class="md-ellipsis">
-    Sistemas dinámicos
+    Bienvenido a RK4
   </span>
   
 
@@ -513,7 +513,10 @@
 
             <details class="quote">
               <summary>Source code in <code>src/RK4.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
 <span class="normal"> 9</span>
 <span class="normal">10</span>
 <span class="normal">11</span>
@@ -529,10 +532,7 @@
 <span class="normal">21</span>
 <span class="normal">22</span>
 <span class="normal">23</span>
-<span class="normal">24</span>
-<span class="normal">25</span>
-<span class="normal">26</span>
-<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dyn_generator</span><span class="p">(</span><span class="n">oper</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">dyn_generator</span><span class="p">(</span><span class="n">oper</span><span class="p">,</span> <span class="n">state</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Se refiere a la función que genera la dinámica del problema.</span>
 
 <span class="sd">    Examples:</span>
@@ -674,7 +674,10 @@
 
             <details class="quote">
               <summary>Source code in <code>src/RK4.py</code></summary>
-              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">29</span>
+              <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
 <span class="normal">30</span>
 <span class="normal">31</span>
 <span class="normal">32</span>
@@ -693,10 +696,7 @@
 <span class="normal">45</span>
 <span class="normal">46</span>
 <span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">oper</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">rk4</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">oper</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">h</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Se refiere a la función que realiza la operación dinámica (implementación de RK4).</span>
 
 <span class="sd">    Examples:</span>
