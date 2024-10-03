@@ -20,7 +20,7 @@
     
     
       
-        <title>Ejemplo de uso - Solucion de sistemas dinamicos con RK4</title>
+        <title>Ejemplo de uso - Solución de sistemas dinámicos con RK4</title>
       
     
     
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Solucion de sistemas dinamicos con RK4" class="md-header__button md-logo" aria-label="Solucion de sistemas dinamicos con RK4" data-md-component="logo">
+    <a href="index.html" title="Solución de sistemas dinámicos con RK4" class="md-header__button md-logo" aria-label="Solución de sistemas dinámicos con RK4" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -94,7 +94,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Solucion de sistemas dinamicos con RK4
+            Solución de sistemas dinámicos con RK4
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -175,13 +175,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Solucion de sistemas dinamicos con RK4" class="md-nav__button md-logo" aria-label="Solucion de sistemas dinamicos con RK4" data-md-component="logo">
+    <a href="index.html" title="Solución de sistemas dinámicos con RK4" class="md-nav__button md-logo" aria-label="Solución de sistemas dinámicos con RK4" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Solucion de sistemas dinamicos con RK4
+    Solución de sistemas dinámicos con RK4
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -217,7 +217,7 @@
         
   
   <span class="md-ellipsis">
-    Metodo numerico Runge-Kutta de orden 4
+    Método numérico Runge-Kutta de orden 4
   </span>
   
 
@@ -310,8 +310,8 @@
 
 
 <h1 id="ejemplo-de-uso">Ejemplo de uso</h1>
-<p>En el presente documento se mostrara un ejemplo de uso del codigo de implementacion del metodo RK4, este se encuentra en Referencia.</p>
-<p>Se tiene que la dinámica del problema depende intrínsicamente del operador <script type="math/tex">\mathbf{O}</script>. De forma que se escoge el siguiente:
+<p>En el presente documento se mostrará un ejemplo de uso del código de implementación del método RK4, este se encuentra en Referencia.</p>
+<p>Se tiene que la dinámica del problema depende intrínsecamente del operador <script type="math/tex">\mathbf{O}</script>. De forma que se escoge el siguiente:
 <script type="math/tex; mode=display">\begin{equation}
 \mathbf{O}=\begin{pmatrix}
 0 & 1 \\
@@ -319,8 +319,8 @@
 \end{pmatrix}
 \end{equation}</script>
 </p>
-<p>Dicho operador puede tener distintos significados físicos dependiendo del problema dinámico en cuestión. Y su implementacion en python se veria de la siquiente manera: <code>oOper = np.array([[0, 1], [1, 0]])</code> (tomese en cuenta que<code>np</code> representa un acronimo para invocar la funcionalidad modulo <code>numpy</code>).</p>
-<p>Ademas, para el estado inicial se utilizara:
+<p>Dicho operador puede tener distintos significados físicos dependiendo del problema dinámico en cuestión. Y su implementación en python se vería de la siguiente manera: <code>oOper = np.array([[0, 1], [1, 0]])</code> (tómese en cuenta que<code>np</code> representa un acrónimo para invocar la funcionalidad módulo <code>numpy</code>).</p>
+<p>Además, para el estado inicial se utilizará:
 <script type="math/tex; mode=display">\begin{equation}
 \mathbf{y}(t_0)=\begin{pmatrix}
 1 & 0 \\
@@ -329,18 +329,25 @@
 \end{equation}</script>
 </p>
 <p>Equivalentemente, en python: <code>yInit = np.array([[1, 0], [0, 0]])</code>.</p>
-<p>Ahora, se procede a inicializar un arreglo de valores temporales y definir <script type="math/tex">h</script>, que como  se menciono anteriormente, es el paso por iteración:</p>
+<p>Ahora, se procede a inicializar un arreglo de valores temporales y definir <script type="math/tex">h</script>, que como  se mencionó anteriormente, es el paso por iteración:</p>
 <pre><code>times = np.linspace(0.0,10.0, num=50)     
 h=times[1]-times[0]
 </code></pre>
-<p>Una buena practica es realizar un "deep copy" de un objeto sobre el que vamos a sobreescribir mas adelante, este es el caso de <code>yInit</code>, por lo tanto, se usara <code>copy()</code>, tambien del modulo <code>numpy</code>:</p>
+<p>Una buena práctica es realizar un "deep copy" de un objeto sobre el que vamos a sobreescribir más adelante, este es el caso de <code>yInit</code>, por lo tanto, se usará <code>copy()</code>, también del módulo <code>numpy</code>:</p>
 <p><code>yCopy = yInit.copy()</code></p>
-<p>Con esto hecho, se llamara de manera iterativa la rutina <code>rk4()</code>. Calculando el operador del estado del sistema <script type="math/tex">\mathbf{y}(t)</script> a través del tiempo. Para visulizar su cambio de una forma clara, se va a guardar la entrada <script type="math/tex">(0, 0)</script> y <script type="math/tex">(1, 1)</script> de la matriz <script type="math/tex">\mathbf{y}(t)</script> para posteriormente graficarlas. </p>
-<p>De manera que, se inicializara dos arreglos destinados a contener dichas entradas con valores iniciales de cero. Se utilizara el mismo tamaño del arreglo que contiene la variable independiente temporal:</p>
+<p>Con esto hecho, se llamará de manera iterativa la rutina <code>rk4()</code>. Calculando así el operador que genera la dinámica del sistema, u operador del estado del sistema</p>
+<p>
+<script type="math/tex; mode=display">\begin{equation}
+f(t,\mathbf{y}) = -i[\mathbf{O}, \mathbf{y}(t)] 
+\end{equation}</script>
+</p>
+<p>a través del tiempo. Es importante notar que <script type="math/tex">f</script> no depende explícitamente de <script type="math/tex">t</script>, sino, del operador y el estado; siendo en realidad este último el que cuenta con una dependencia temporal explícita.</p>
+<p>Para visualizar su cambio de una forma clara, se va a guardar la entrada <script type="math/tex">(0, 0)</script> y <script type="math/tex">(1, 1)</script> de la matriz <script type="math/tex">\mathbf{y}(t)</script> para posteriormente graficarlas.</p>
+<p>De manera que, se inicializará dos arreglos destinados a contener dichas entradas con valores iniciales de cero. Se utilizará el mismo tamaño del arreglo que contiene la variable independiente temporal:</p>
 <pre><code>stateQuant00 = np.zeros(times.size)      
 stateQuant11 = np.zeros(times.size)
 </code></pre>
-<p>Y ademas, se crea una rutina que realiza la evolucion temporal:</p>
+<p>Y además, se crea una rutina que almacena los valores deseados, y realiza la evolución temporal:</p>
 <pre><code>for tt in range(times.size):
     stateQuant00[tt]=yInit[0,0].real
     stateQuant11[tt]=yInit[1,1].real
@@ -364,7 +371,7 @@ plt.legend([&quot;Entrada (0,0)&quot;, &quot;Entrada (1,1)&quot;], loc=&quot;upp
 
 plt.savefig('Evolucion de las entradas.png')
 </code></pre>
-<p>El grafico resultante se muestra a continuacion:</p>
+<p>El gráfico resultante se muestra a continuación:</p>
 <div>
 <img src="Evolucion de las entradas.png" width="600"/>
 </div>

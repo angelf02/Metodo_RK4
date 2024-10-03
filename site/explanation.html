@@ -20,7 +20,7 @@
     
     
       
-        <title>Metodo numerico Runge-Kutta de orden 4 - Solucion de sistemas dinamicos con RK4</title>
+        <title>Método numérico Runge-Kutta de orden 4 - Solución de sistemas dinámicos con RK4</title>
       
     
     
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Solucion de sistemas dinamicos con RK4" class="md-header__button md-logo" aria-label="Solucion de sistemas dinamicos con RK4" data-md-component="logo">
+    <a href="index.html" title="Solución de sistemas dinámicos con RK4" class="md-header__button md-logo" aria-label="Solución de sistemas dinámicos con RK4" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -94,13 +94,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Solucion de sistemas dinamicos con RK4
+            Solución de sistemas dinámicos con RK4
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Metodo numerico Runge-Kutta de orden 4
+              Método numérico Runge-Kutta de orden 4
             
           </span>
         </div>
@@ -175,13 +175,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Solucion de sistemas dinamicos con RK4" class="md-nav__button md-logo" aria-label="Solucion de sistemas dinamicos con RK4" data-md-component="logo">
+    <a href="index.html" title="Solución de sistemas dinámicos con RK4" class="md-nav__button md-logo" aria-label="Solución de sistemas dinámicos con RK4" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Solucion de sistemas dinamicos con RK4
+    Solución de sistemas dinámicos con RK4
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -226,7 +226,7 @@
         
   
   <span class="md-ellipsis">
-    Metodo numerico Runge-Kutta de orden 4
+    Método numérico Runge-Kutta de orden 4
   </span>
   
 
@@ -309,9 +309,9 @@
                   
 
 
-<h1 id="metodo-numerico-runge-kutta-de-orden-4">Metodo numerico Runge-Kutta de orden 4</h1>
+<h1 id="metodo-numerico-runge-kutta-de-orden-4">Método numérico Runge-Kutta de orden 4</h1>
 <p>En análisis numérico, los métodos de Runge-Kutta son un conjunto de métodos genéricos iterativos, explícitos e implícitos, de resolución numérica de ecuaciones diferenciales ordinarias, concretamente, del problema de valor inicial. Este conjunto de métodos fue inicialmente desarrollado alrededor del año 1900 por los matemáticos alemanes Carl David Tolmé Runge y Martin Wilhelm Kutta.</p>
-<p>Restringiremos nuestro estudio al método Runge-Kutta de orden 4 (RK4). Habiendo definido el problema: <script type="math/tex">\frac{dy}{dt} = f(t, y)</script> sujeto a <script type="math/tex">y(t_0) = y_0</script>, se procede a ir perturbando el estado "presente" <script type="math/tex">y_{n}(t_{n})</script> de forma iterativa, con el objetivo de encontrar el estado siguiente (<script type="math/tex">y_{n+1}</script>):</p>
+<p>Restringimos nuestro estudio al método Runge-Kutta de orden 4 (RK4). Habiendo definido el problema: <script type="math/tex">\frac{dy}{dt} = f(t, y)</script> sujeto a <script type="math/tex">y(t_0) = y_0</script>, se procede a ir perturbando el estado "presente" <script type="math/tex">y_{n}(t_{n})</script> de forma iterativa, con el objetivo de encontrar el estado siguiente (<script type="math/tex">y_{n+1}</script>):</p>
 <p>
 <script type="math/tex">y_{n+1}=y_{n}+\frac{1}{6}(k_{1}+2k_{2}+2k_{3}+k_{4})</script>
 </p>
@@ -326,7 +326,7 @@ k_{4} := h \cdot f \left( t_{n} + h , y_{n} + k_{3} \right)
 \end{array} \right.
 \end{equation}</script>
 </p>
-<p>Aca, <script type="math/tex">h</script> es el paso por iteración, o lo que es lo mismo, el incremento <script type="math/tex">\Delta t_{n}</script> entre los sucesivos puntos <script type="math/tex">t_{n}</script> y <script type="math/tex">t_{n+1}</script>. </p>
+<p>Acá, <script type="math/tex">h</script> es el paso por iteración, o lo que es lo mismo, el incremento <script type="math/tex">\Delta t_{n}</script> entre los sucesivos puntos <script type="math/tex">t_{n}</script> y <script type="math/tex">t_{n+1}</script>.</p>
 
 
 
